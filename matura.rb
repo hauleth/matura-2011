@@ -12,7 +12,6 @@ def sklej(n)
 end
 
 def sklej_gen(size)
-  raise ArgumentError unless size.is_a? Integer
   tab = [1,1]
   (2..size).each do |i|
     tab[i] = i - 1 + tab[(i/2.0).floor] + tab[(i/2.0).ceil]
