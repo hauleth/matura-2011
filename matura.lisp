@@ -1,3 +1,5 @@
+; using Scheme syntax, compiled using GNU Guile
+
 (define (sklej n)
   (if (= n 1)
     1
