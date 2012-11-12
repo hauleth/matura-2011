@@ -1,6 +1,6 @@
 import Control.Monad.Instances
 
-ssklej :: Integral a => a -> a
+sklej :: Integral a => a -> a
 sklej n | n == 1    = 1
         | otherwise = n - 1 + (sklej . floor $ tmp) + (sklej . ceiling $ tmp)
                       where tmp = (/2) $ fromIntegral n
