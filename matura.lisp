@@ -11,7 +11,8 @@
              (lambda (iter ret)
                (if (= n (length ret))
                  ret
-                 (let* ((tmp (/ iter 2)) (ret (append ret (list (+ (- iter 1) (list-ref ret (ceiling tmp)) (list-ref ret (floor tmp)))))))
+                 (let* ((tmp (/ iter 2))
+                        (ret (append ret (list (+ (- iter 1) (list-ref ret (ceiling tmp)) (list-ref ret (floor tmp)))))))
                    (loop (+ iter 1) ret))))))
     (loop 2 '(1 1))))
 
