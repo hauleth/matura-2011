@@ -24,10 +24,7 @@ begin
   tab[1] := 1;
   for i := 2 to high(tab) do
   begin
-    if i mod 2 = 0 then
-      tab[i] := i - 1 + 2*tab[round(i/2)]
-    else
-      tab[i] := i - 1 + tab[floor(i/2)] + tab[ceil(i/2)];
+    tab[i] := i - 1 + tab[floor(i/2)] + tab[ceil(i/2)];
   end;
 end;
 
