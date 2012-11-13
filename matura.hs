@@ -1,9 +1,10 @@
 import Control.Monad.Instances
 
 sklej :: Integral a => a -> a
-sklej n | n == 1    = 1
-        | otherwise = n - 1 + (sklej . floor $ tmp) + (sklej . ceiling $ tmp)
-                      where tmp = (/2) $ fromIntegral n
+sklej n
+    | n == 1    = 1
+    | otherwise = n - 1 + (sklej . floor $ tmp) + (sklej . ceiling $ tmp) where
+        tmp = (/2) $ fromIntegral n
 
 sklej_list :: [Integer]
 sklej_list = 1 : zipWith (+) [1..] (tail >>= zipWith (+) $ replicate 2 =<< sklej_list)

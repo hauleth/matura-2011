@@ -7,7 +7,7 @@
 (define (sklej-gen n)
   (letrec ((loop
              (lambda (iter ret)
-               (if (= n (length ret))
+               (if (= (+ n 1) (length ret))
                  ret
                  (let* ((tmp (/ iter 2))
                         (ret (append ret (list (+ (- iter 1) (list-ref ret (ceiling tmp)) (list-ref ret (floor tmp)))))))
