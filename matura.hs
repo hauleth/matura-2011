@@ -6,8 +6,8 @@ sklej n
     | otherwise = n - 1 + (sklej . floor $ tmp) + (sklej . ceiling $ tmp) where
         tmp = (/2) $ fromIntegral n
 
-sklej_list :: [Integer]
-sklej_list = 1 : zipWith (+) [1..] (tail >>= zipWith (+) $ replicate 2 =<< sklej_list)
+sklejList :: [Integer]
+sklejList = 1 : zipWith (+) [1..] (tail >>= zipWith (+) $ replicate 2 =<< sklej_list)
 
 main :: IO ()
 -- main = putStrLn $ concat $ [ show x ++ "\n" | x <- map sklej [1..10000] ] -- run recursive version
