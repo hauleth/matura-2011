@@ -30,8 +30,8 @@ end;
 
 begin
 
-//for i := 1 to 10000 do
-//  writeln(sklej(i));
+{for i := 1 to 10000 do
+  writeln(sklej(i));}
 
 sklej_fill(tab);
 for i := 1 to 10000 do

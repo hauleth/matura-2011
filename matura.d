@@ -8,7 +8,7 @@ uint sklej(uint n) {
   return n - 1 + sklej(n/2) + sklej((n+1)/2);
 }
 
-uint[] sklej_gen(uint size) {
+uint[] sklejGen(uint size) {
   uint[] tab;
   tab.length = size + 1;
   tab[0] = tab[1] = 1;
@@ -18,7 +18,7 @@ uint[] sklej_gen(uint size) {
 }
 
 void main() {
-  uint[] tab = sklej_gen(10000);
+  uint[] tab = sklejGen(10000);
   foreach(n; tab)
     writeln(n);
 }

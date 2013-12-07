@@ -19,6 +19,6 @@ def sklej_gen(size)
   tab
 end
 
-#(1..10000).each {|i| puts sklej(i) }
-sklej_gen(10000).each {|i| puts i}
+#(1..10000).each { |i| puts sklej(i) }
+sklej_gen(10000).each { |i| puts i }
 
